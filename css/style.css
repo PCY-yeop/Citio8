@@ -3,7 +3,7 @@
   --leftw: 320px;
   --gap: 30px;
   --rightw: 620px;
-  --panelpad: 20px;
+  --panelpad: 10px;
   --brand: #001976;
   --muted: #666;
 }
@@ -439,11 +439,6 @@ body {
   transform: none;
   transition: opacity .7s ease, transform .7s cubic-bezier(.22, .61, .36, 1);
   will-change: opacity, transform;
-}
-
-[data-reveal].is-revealed {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 @media (prefers-reduced-motion: reduce) {
