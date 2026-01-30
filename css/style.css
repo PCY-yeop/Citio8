@@ -82,29 +82,35 @@ body{font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-s
 .info .row:first-child{border-top:none}
 .info .label{width:48px;color:#999;font-size:13px}
 .info .value{flex:1;font-size:13px;color:#222}
-.card-bottom{
-  background:#8a6e4b;
-  color:#fff;
-  text-align:center;
-  padding:10px 8%;
-}
+/* 사용자 정의 스타일 */
+        .card-bottom {
+            color: #000000;
+            text-align: center;
+            padding: 10px 8%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-.card-bottom p{
-  margin:0;
-  font-size:18px;
-  line-height:1.4;
-  font-weight:700;
-}
+        /* 》 문자를 아래로 돌리고 크기를 조절하는 스타일 */
+        .arrow-char {
+            display: inline-block;
+            transform: rotate(90deg); /* 90도 회전시켜 아래 방향으로 */
+            font-size: 20px;         /* 아주 작게 설정 */
+            font-family: sans-serif;
+            font-weight: bold;
+            line-height: 1;
+        }
 
-.card-bottom a{
-  display:block;
-  color:#fff;
-  text-decoration:none;
-}
-
-.card-bottom a:active{
-  opacity:0.85;
-}
+        /* 위아래 부유 애니메이션 */
+        @keyframes float-ud {
+            0%, 100% { transform: translateY(0) rotate(90deg); }
+            50% { transform: translateY(4px) rotate(90deg); }
+        }
+        .ani-ud {
+            animation: float-ud 2s ease-in-out infinite;
+        }
+        
 .btn{display:block;text-align:center;padding:12px;border-radius:5px;background:#333;color:#fff;text-decoration:none;font-weight:600;transition:transform .08s ease, filter .2s}
 .btn:active{transform:scale(.98)}
 .btn.reserve{background:#332f2c}
